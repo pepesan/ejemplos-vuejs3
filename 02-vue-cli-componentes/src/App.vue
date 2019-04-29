@@ -4,18 +4,22 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <Componente/>
     <Componente/>
+    <Parametros param1="valor"></Parametros>
+    <Parametros param1="Otro Valor"></Parametros>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Componente from './components/Componente.vue'
+import Parametros from './components/Parametros.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    Componente
+    Componente,
+    Parametros
   }
 }
 </script>
