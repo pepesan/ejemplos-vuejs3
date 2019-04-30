@@ -12,10 +12,10 @@
                 method="post"
         >
 
-            <p v-if="errors.length">
+            <p v-if="merrors.length">
                 <b>Please correct the following error(s):</b>
                 <ul>
-                    <li v-for="error in errors">{{ error }}</li>
+                    <li v-for="error in merrors">{{ error }}</li>
                 </ul>
             </p>
 
@@ -69,6 +69,17 @@
             </p>
 
         </form>
+        <div>
+            <h2>Vee Validate</h2>
+            <div class="">
+                <label class="label" for="email">Email</label>
+                <p :class="{ 'control': true }">
+                    <input v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email">
+                    <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+                </p>
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -78,7 +89,7 @@
         data: function () {
             return {
                 message: "",
-                errors: [],
+                merrors: [],
                 name: null,
                 age: null,
                 email: null,
@@ -91,18 +102,18 @@
                     return true;
                 }
 
-                this.errors = [];
+                this.merrors = [];
 
                 if (!this.name) {
-                    this.errors.push('Name required.');
+                    this.merrors.push('Name required.');
                 }
                 if (!this.age) {
-                    this.errors.push('Age required.');
+                    this.merrors.push('Age required.');
                 }
                 if (!this.email) {
-                    this.errors.push('Email required.');
+                    this.merrors.push('Email required.');
                 } else if (!this.validEmail(this.email)) {
-                    this.errors.push('Valid email required.');
+                    this.merrors.push('Valid email required.');
                 }
 
                 e.preventDefault();
