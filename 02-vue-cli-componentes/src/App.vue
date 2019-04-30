@@ -4,8 +4,10 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <Componente/>
     <Componente/>
-    <Parametros param1="valor"></Parametros>
-    <Parametros param1="Otro Valor"></Parametros>
+    <Parametros param1="valor" contador ="0"></Parametros>
+    <Parametros param1="Otro Valor" contador="12"></Parametros>
+
+    <Eventos/>
   </div>
 </template>
 
@@ -13,13 +15,15 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Componente from './components/Componente.vue'
 import Parametros from './components/Parametros.vue'
+import Eventos from './components/Eventos.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
     Componente,
-    Parametros
+    Parametros,
+    Eventos
   }
 }
 </script>
