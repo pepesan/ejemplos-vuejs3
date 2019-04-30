@@ -6,8 +6,8 @@
     <Componente/>
     <Parametros param1="valor" contador ="0"></Parametros>
     <Parametros param1="Otro Valor" contador="12"></Parametros>
-
     <Eventos/>
+    <Directivas></Directivas>
   </div>
 </template>
 
@@ -16,6 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Componente from './components/Componente.vue'
 import Parametros from './components/Parametros.vue'
 import Eventos from './components/Eventos.vue'
+import Directivas from './components/Directivas.vue'
 
 export default {
   name: 'app',
@@ -23,7 +24,8 @@ export default {
     HelloWorld,
     Componente,
     Parametros,
-    Eventos
+    Eventos,
+    Directivas
   }
 }
 </script>
