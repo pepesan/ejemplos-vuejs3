@@ -1,6 +1,7 @@
 <template>
     <div>
         <button v-on:click="clickado">Pulsame</button>
+        <button @click="clickado">Hazme click</button>
         <h2>Dato {{count}}</h2>
     </div>
 </template>
