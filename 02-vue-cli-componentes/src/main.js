@@ -19,6 +19,12 @@ Vue.filter('sumaParametros', function (value,arg1,arg2) {
       value.slice(1) + arg1 +arg2;
 });
 
+Vue.mixin({
+  created: function () {
+    console.log("created de mixin global");
+  }
+});
+
 new Vue({
   render: h => h(App),
 }).$mount('#app');

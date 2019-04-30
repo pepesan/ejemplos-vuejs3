@@ -9,6 +9,7 @@
     <Eventos/>
     <Directivas></Directivas>
     <Filtros></Filtros>
+    <Mixins></Mixins>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import Parametros from './components/Parametros.vue'
 import Eventos from './components/Eventos.vue'
 import Directivas from './components/Directivas.vue'
 import Filtros from './components/Filtros.vue'
+import Mixins from './components/Mixins.vue'
 
 export default {
   name: 'app',
@@ -28,7 +30,8 @@ export default {
     Parametros,
     Eventos,
     Directivas,
-    Filtros
+    Filtros,
+    Mixins
   }
 }
 </script>
