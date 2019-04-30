@@ -8,6 +8,7 @@
     <Parametros param1="Otro Valor" contador="12"></Parametros>
     <Eventos/>
     <Directivas></Directivas>
+    <Filtros></Filtros>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Componente from './components/Componente.vue'
 import Parametros from './components/Parametros.vue'
 import Eventos from './components/Eventos.vue'
 import Directivas from './components/Directivas.vue'
+import Filtros from './components/Filtros.vue'
 
 export default {
   name: 'app',
@@ -25,7 +27,8 @@ export default {
     Componente,
     Parametros,
     Eventos,
-    Directivas
+    Directivas,
+    Filtros
   }
 }
 </script>
