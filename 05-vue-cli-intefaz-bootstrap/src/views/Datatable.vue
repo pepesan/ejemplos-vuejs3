@@ -74,7 +74,8 @@
                     { id: 7, first_name: 'The Great', last_name: 'Gazzoo' },
                     { id: 8, first_name: 'Mr', last_name: 'Slate' },
                     { id: 9, first_name: 'Pearl', last_name: 'Slaghoople' }
-                ]
+                ],
+                show_form: true
             }
         },
         methods:{
@@ -89,6 +90,25 @@
             },
             remove: function (row) {
                 console.log(row.item.id);
+            },
+            onSubmit(evt) {
+                evt.preventDefault()
+                alert(JSON.stringify(this.form))
+            },
+            onReset(evt) {
+                evt.preventDefault();
+                // Reset our form values
+                this.form.id = null;
+                this.form.first_name = '';
+                this.form.last_name = '';
+                // Trick to reset/clear native browser form validation state
+                /*
+                this.show = false;
+                this.$nextTick(() => {
+                    this.show = true
+                })
+
+                 */
             }
         },
         computed: {

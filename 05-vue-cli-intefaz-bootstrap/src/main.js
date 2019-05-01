@@ -4,8 +4,15 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VeeValidate from 'vee-validate'
 
 Vue.use(BootstrapVue);
+Vue.use(VeeValidate, {
+  // This is the default
+  inject: true,
+  // Important to name this something other than 'fields'
+  fieldsBagName: 'veeFields'
+})
 Vue.config.productionTip = false;
 
 new Vue({

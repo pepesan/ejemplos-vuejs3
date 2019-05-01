@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import Interfaz from "./views/Interfaz";
 import Animaciones from "./views/Animaciones";
 import Datatable from "./views/Datatable";
+import Formulario from "./views/Formulario";
+import Form2 from "./views/Form2";
 
 Vue.use(Router)
 
@@ -25,6 +27,16 @@ export default new Router({
       path: '/datatable',
       name: 'datatable',
       component: Datatable
+    },
+    {
+      path: '/formulario',
+      name: 'formulario',
+      component: Formulario
+    },
+    {
+      path: '/form2',
+      name: 'form2',
+      component: Form2
     },
     {
       path: '/animaciones',

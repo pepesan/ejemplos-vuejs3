@@ -80,7 +80,7 @@
                     <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
                 </p>
             </div>
-
+            <input type="submit" value="Submit"/>
         </div>
     </div>
 </template>
