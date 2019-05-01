@@ -1,8 +1,9 @@
 <template>
-    
+    {{foo}}
 </template>
 
 <script>
+
     var mixin = {
         data: function () {
             return {

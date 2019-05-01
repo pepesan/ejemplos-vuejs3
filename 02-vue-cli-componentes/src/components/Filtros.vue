@@ -13,9 +13,13 @@
                 message: 'palabra'
             }
         },
+        created: function(){
+            console.log(this);
+        },
         filters: {
             //filtros específicos por componente
             capitalize: function (value) {
+
                 console.log(value);
                 if (!value) return ''
                 value = value.toString()
