@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Interfaz from "./views/Interfaz";
 import Animaciones from "./views/Animaciones";
+import Datatable from "./views/Datatable";
 
 Vue.use(Router)
 
@@ -19,6 +20,11 @@ export default new Router({
       path: '/interfaz',
       name: 'interfaz',
       component: Interfaz
+    },
+    {
+      path: '/datatable',
+      name: 'datatable',
+      component: Datatable
     },
     {
       path: '/animaciones',

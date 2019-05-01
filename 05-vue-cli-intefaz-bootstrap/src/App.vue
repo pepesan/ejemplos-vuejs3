@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/interfaz">Interfaz</router-link> |
+      <router-link to="/datatable">Datatable</router-link> |
       <router-link to="/animaciones">Animaciones</router-link> |
       <router-link to="/about">About</router-link>
     </div>
