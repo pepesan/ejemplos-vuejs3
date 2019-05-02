@@ -6,6 +6,7 @@ import Animaciones from "./views/Animaciones";
 import Datatable from "./views/Datatable";
 import Formulario from "./views/Formulario";
 import Form2 from "./views/Form2";
+import Peticiones from "./views/Peticiones";
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/form2',
       name: 'form2',
       component: Form2
+    },
+    {
+      path: '/peticiones',
+      name: 'peticiones',
+      component: Peticiones
     },
     {
       path: '/animaciones',

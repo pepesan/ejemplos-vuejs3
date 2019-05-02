@@ -14,6 +14,7 @@
             <b-nav-item to="/datatable">Datatable</b-nav-item>
             <b-nav-item to="/formulario">Formulario</b-nav-item>
             <b-nav-item to="/form2">Form2</b-nav-item>
+            <b-nav-item to="/peticiones">Peticiones</b-nav-item>
             <b-nav-item to="/animaciones">Animaciones</b-nav-item>
             <b-nav-item to="/about">About</b-nav-item>
           </b-navbar-nav>
