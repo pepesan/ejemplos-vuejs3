@@ -20,7 +20,7 @@
             Submitted Names:
             <div v-if="submittedNames.length === 0">--</div>
             <ul v-else class="mb-0 pl-3">
-                <li v-for="name in submittedNames">{{ name }}</li>
+                <li v-for="(name,index) in submittedNames" :key="index">{{ name }}</li>
             </ul>
         </div>
 

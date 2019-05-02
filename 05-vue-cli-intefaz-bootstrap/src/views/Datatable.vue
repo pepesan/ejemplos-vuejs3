@@ -108,6 +108,10 @@
                 is_editing:false
             }
         },
+        filtered: function(items, number){
+            console.log("items:"+items);
+            console.log("number:"+number);
+        },
         methods:{
             create: function(){
                 console.log("create");
@@ -151,7 +155,7 @@
               this.show_form=false;
             },
             edit: function (row) {
-                console.log(row.item);
+                //console.log(row.item);
                 this.form=row.item;
                 this.show_list=false;
                 this.is_editing=true;
@@ -210,7 +214,8 @@
                         if (result) {
                             // eslint-disable-next-line
                             //alert('Form Submitted!');
-                            this.items.push(this.form);
+                            //this.items.push(this.form);
+                            this.save();
                             this.show_form=false;
                             this.show_list=true;
                             return;
@@ -222,7 +227,20 @@
         },
         computed: {
             rows() {
-                return this.items.length
+                if(this.filtro==null){
+                    return this.items.length;
+                }else{
+                    return this.items.filter(item=>{
+                        if(
+                            this.filtro.includes(item.id) ||
+                            item.first_name.includes(this.filtro) ||
+                            item.last_name.includes(this.filtro)
+                            ){
+                            return item;
+                        }
+                    }).length
+                }
+
             }
         },
         components:{

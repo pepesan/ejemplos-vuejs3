@@ -12,11 +12,11 @@
         <div>
             <h2>Listado completo</h2>
             <ul>
-                <li v-for="item in todos">{{item.id}}</li>
+                <li v-for="(item,index) in todos" :key="index">{{item.id}}</li>
             </ul>
             <h2>Listado completo con done a true</h2>
             <ul>
-                <li v-for="item in doneTodos">{{item.id}}</li>
+                <li v-for="(item,index) in doneTodos" :key="index">{{item.id}}</li>
             </ul>
         </div>
     </div>
