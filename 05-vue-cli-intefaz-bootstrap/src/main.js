@@ -8,7 +8,9 @@ import VeeValidate from 'vee-validate'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
+import Vuex from 'vuex'
+import 'es6-promise/auto'
+Vue.use(Vuex);
 
 library.add(fas);
 
@@ -23,7 +25,11 @@ Vue.use(VeeValidate, {
 });
 Vue.config.productionTip = false;
 
+// Vuex Store definition
+import store from './store'
+
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  store
 }).$mount('#app');

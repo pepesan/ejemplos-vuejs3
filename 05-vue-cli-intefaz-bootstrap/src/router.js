@@ -7,6 +7,7 @@ import Datatable from "./views/Datatable";
 import Formulario from "./views/Formulario";
 import Form2 from "./views/Form2";
 import Peticiones from "./views/Peticiones";
+import VuexDemo from "./views/VuexDemo";
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/form2',
       name: 'form2',
       component: Form2
+    },
+    {
+      path: '/vuexdemo',
+      name: 'vuexdemo',
+      component: VuexDemo
     },
     {
       path: '/peticiones',
