@@ -4,7 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <Componente/>
     <Componente/>
-    <Parametros param1="valor" contador ="0"></Parametros>
+    <Parametros param1="valor" contador ="0" :param2="parametro"></Parametros>
     <Parametros param1="Otro Valor" contador="12"></Parametros>
     <Eventos/>
     <Directivas></Directivas>
@@ -32,6 +32,13 @@ export default {
     Directivas,
     Filtros,
     Mixins
+  },
+  data: function () {
+      return {
+        parametro: {
+          texto: "Hola"
+        }
+      }
   }
 }
 </script>

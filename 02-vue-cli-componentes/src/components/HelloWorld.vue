@@ -5,14 +5,11 @@
 </template>
 
 <script>
-  import MMixin from "./mimixin";
-
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  },
-  mixins:[mixin]
+  }
 }
 </script>
 
