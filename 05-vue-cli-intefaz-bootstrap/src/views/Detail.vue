@@ -15,6 +15,13 @@
         name: "Detail",
         props:{
             form: Object
+        },
+        methods:{
+            volver: function () {
+                console.log("Volver");
+                console.log(this.$parent);
+                this.$parent.volver();
+            }
         }
     }
 </script>
