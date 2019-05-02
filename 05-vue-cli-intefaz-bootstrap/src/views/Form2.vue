@@ -15,40 +15,55 @@
                     type="number"
                     required
             ></b-form-input>
-            <i v-show="errors.has('id')" class="fa fa-warning"></i>
+            <i v-show="errors.has('id')" class="fa fa-warning"><font-awesome-icon :icon="['fa', 'exclamation']"  class="icon alt"/></i>
             <span v-show="errors.has('id')" class="help is-danger">{{ errors.first('id') }}</span>
         </b-form-group>
-        <div class="column is-12">
-            <label class="label">Name</label>
-            <p class="control has-icon has-icon-right">
-                <input name="name" v-model="name" v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
-                <i v-show="errors.has('name')" class="fa fa-warning"></i>
-                <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
-            </p>
-        </div>
-        <div class="column is-12">
-            <label class="label">Phone</label>
-            <p class="control has-icon has-icon-right">
-                <input name="phone" v-model="phone" v-validate="'required|numeric'" :class="{'input': true, 'is-danger': errors.has('phone') }" type="text" placeholder="Phone">
-                <i v-show="errors.has('phone')" class="fa fa-warning"></i>
-                <span v-show="errors.has('phone')" class="help is-danger">{{ errors.first('phone') }}</span>
-            </p>
-        </div>
-        <div class="column is-12">
-            <label class="label">Website</label>
-            <p class="control has-icon has-icon-right">
-                <input name="url" v-model="url" v-validate="'required|url'" :class="{'input': true, 'is-danger': errors.has('url') }" type="text" placeholder="Website">
-                <i v-show="errors.has('url')" class="fa fa-warning"></i>
-                <span v-show="errors.has('url')" class="help is-danger">{{ errors.first('url') }}</span>
-            </p>
-        </div>
+        <b-form-group
+                id="input-group-1"
+                label="Nombre:"
+                label-for="input-1"
+                description="Nombre de la persona"
+        >
+            <b-form-input
+                    v-validate="'required|alpha'"
+                    :class="{'input': true, 'is-danger': errors.has('first_name') }"
+                    name="first_name" placeholder="Nombre"
+                    id="input-1"
+                    v-model="form.first_name"
+                    type="text"
+                    required
+            ></b-form-input>
+            <i v-show="errors.has('first_name')"><font-awesome-icon :icon="['fa', 'exclamation']"  class="icon alt"/></i>
+            <span v-show="errors.has('first_name')" class="help is-danger">{{ errors.first('first_name') }}</span>
+        </b-form-group>
+        <b-form-group
+                id="input-group-2"
+                label="Apellidos:"
+                label-for="input-2"
+                description="Apellidos de la persona"
+        >
+            <b-form-input
+                    v-validate="'required|min:4'"
+                    :class="{'input': true, 'is-danger': errors.has('last_name') }"
+                    name="last_name" placeholder="Apellidos"
+                    id="input-2"
+                    v-model="form.last_name"
+                    type="text"
+                    required
+            ></b-form-input>
+            <i v-show="errors.has('last_name')"><font-awesome-icon :icon="['fa', 'exclamation']"  class="icon alt"/></i>
+            <span v-show="errors.has('last_name')" class="help is-danger">{{ errors.first('last_name') }}</span>
+        </b-form-group>
 
         <div class="column is-12">
             <p class="control">
-                <b-button type="submit" variant="primary" :disabled="errors.items.lenght > 0">Submit</b-button>
-                <b-button type="reset" variant="danger">Reset</b-button>
+                <b-button type="submit" variant="primary" :disabled="errors.items.lenght > 0">
+                    <font-awesome-icon :icon="['fa', 'save']"  class="icon alt"/>Save</b-button>
+                <b-button type="reset" variant="danger">
+                    <font-awesome-icon :icon="['fa', 'recycle']"  class="icon alt"/>Reset</b-button>
             </p>
         </div>
+
     </form>
 </template>
 
@@ -61,7 +76,10 @@
             phone: '',
             url: '',
             form:{
-                id:null
+                id:null,
+                first_name:"",
+                last_name:""
+
             }
         }),
         methods: {
