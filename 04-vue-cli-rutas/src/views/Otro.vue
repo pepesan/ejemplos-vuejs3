@@ -15,9 +15,17 @@
               id: this.$route.params.id
           }
         },
+        created: function(){
+          this.fetchData();
+        },
+        watch: {
+            // call again the method if the route changes
+            '$route': 'fetchData'
+        },
         methods:{
-            created: function () {
+            fetchData: function () {
                 console.log(this.$route.params);
+                this.id= this.$route.params.id;
             },
             volver: function () {
                 this.$router.go(-1);
